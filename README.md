@@ -3,12 +3,27 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.6
+## Latest release: 0.2.7
 
-[Download version 0.2.6](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.6)
+[Download version 0.2.7](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.7)
 for the Windows installer, update patch, checksums, and validation details.
 
-Version 0.2.6 adds **Save as defaults**, **Revert to saved defaults**, and
+Version 0.2.7 renames the viewers to **Data** and **Media**. Files in `Archive`
+folders are hidden by default; **Show archived files** below the explorer controls
+turns their visibility on or off and remembers the preference.
+
+In Postprocessing and Batch, Ctrl/Shift highlights complete rows. **Right-click the
+highlighted group**, then choose **Check selected files/tests** or **Uncheck selected
+files/tests**. Opening the menu preserves the group and does not change checkboxes.
+These actions are only in the right-click menu. Highlight one Batch test to view and
+edit that test's individual settings.
+
+The package includes the missing XLS, XLSB, and ODS spreadsheet readers. This release
+also protects source files during export, preserves existing CSVs if an export fails,
+and saves run history and archive links atomically. Page implementations and module
+metadata are separated to support future modules without changing saved preferences.
+
+The workflows from 0.2.6 include **Save as defaults**, **Revert to saved defaults**, and
 **Restore original defaults** inside Postprocessing. Unloaded length and outer
 diameter are read automatically from acquisition files. Ring measurement defaults
 to **Automatic — bright tissue** with a **0.65** local edge intensity fraction.
@@ -36,7 +51,7 @@ measurements, and records for disconnected folders are preserved.
 
 Use the dashboard's **Check for updates** action to install the latest patch. If an
 older installation cannot start, download and run
-`LabTestingDataDashboard-Setup-0.2.6.exe` in its existing installation folder.
+`LabTestingDataDashboard-Setup-0.2.7.exe` in its existing installation folder.
 After it opens, use **Repair application** to repair the catalog and check the
 installation. **Reinstall from update package…** also accepts the current version's
 patch when installed application files need to be restored.
