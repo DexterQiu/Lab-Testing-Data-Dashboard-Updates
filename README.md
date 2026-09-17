@@ -3,19 +3,30 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.5
+## Latest release: 0.2.6
 
-[Download version 0.2.5](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.5)
+[Download version 0.2.6](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.6)
 for the Windows installer, update patch, checksums, and validation details.
 
-Version 0.2.5 fixes automatic ring measurement using small tissue holes as the
-radial center and adds **Postprocessing → Image measurements → Ring Thickness
-Measurement — Manual**. The manual workflow retains the original MATLAB tracing,
-crop/zoom, post recoloring, saved-mask reuse, Manual/Semi-Auto cleanup, three-mask
-averaging, overlays, circumferential plots, and `thickness.mat` outputs. Selections
-are recorded, and completed manual measurements can supply thickness for biaxial
-extraction. Pixel calibration remains an explicit user input. Automatic boundaries
-remain experimental and must be reviewed against their overlays and any reference.
+Version 0.2.6 adds **Save as defaults**, **Revert to saved defaults**, and
+**Restore original defaults** inside Postprocessing. Unloaded length and outer
+diameter are read automatically from acquisition files. Ring measurement defaults
+to **Automatic — bright tissue** with a **0.65** local edge intensity fraction.
+
+File checks persist across tabs, TIFF images are ordered by earliest creation time,
+and group selection is available in both individual and batch processing. Highlight
+one test in Batch to edit only its parameters. The batch console retains complete
+output from every run and colors progress, completion, review, and error messages.
+
+A finished ring run copies the latest `thickness.mat` into its test folder, keeping
+the previous copy in `Archive`. Both extraction methods use the current test-folder
+copy. A successful rerun archives previous results of the same procedure while
+preserving run history. Failed or cancelled calculations retain the prior results.
+
+The manual ring workflow and original MATLAB measurement functions from 0.2.5 are
+retained, including tracing, crop/zoom, post removal, mask reuse, and three-mask
+averaging. Pixel calibration must match the acquisition. Review automatic boundaries
+against their overlays and available reference measurements.
 
 The installer and application-repair fixes from 0.2.4 are included. Use
 **Settings → Updates → Application repair** when needed. Repair backs up the
@@ -25,7 +36,7 @@ measurements, and records for disconnected folders are preserved.
 
 Use the dashboard's **Check for updates** action to install the latest patch. If an
 older installation cannot start, download and run
-`LabTestingDataDashboard-Setup-0.2.5.exe` in its existing installation folder.
+`LabTestingDataDashboard-Setup-0.2.6.exe` in its existing installation folder.
 After it opens, use **Repair application** to repair the catalog and check the
 installation. **Reinstall from update package…** also accepts the current version's
 patch when installed application files need to be restored.
