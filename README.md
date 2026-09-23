@@ -3,10 +3,25 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.9
+## Latest release: 0.2.10
 
-[Download version 0.2.9](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.9)
+[Download version 0.2.10](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.10)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.2.10 replaces the Reports catalog export controls with **Export project
+Excel…** and embeds the workbook preview in **Report contents**. Select a project,
+review its tabs, and export the same workbook. **Refresh preview** reloads external
+postprocessing changes. Project changes discard obsolete previews before export.
+
+Exports and previews use the supplied template's font families, bold styling,
+number formats, merged groups, gray statistics rows, and border colors and weights.
+Groups, statistics, and formulas expand to fit the project's tests. Every cell
+in the Type columns is horizontal and centered, including Average Data labels.
+Columns widen first; any font reduction is limited
+to one point, with taller rows when necessary. Content is centered and no worksheet
+has frozen or split panes. All 11 template tabs remain, with an additional tab for
+custom or unspecified segments. Editing measurements preserves their full precision.
+Native Excel and the preview agree on all 2,716 formulas in the validation workbook.
 
 Version 0.2.9 fixes the MATLAB mask-selector callback error and makes saved-mask
 reuse follow the selected mask. Manual procedure 1.0.2 is activated on upgrade.
@@ -17,7 +32,7 @@ overrides are converted without losing manual edits. Projects adds a sortable
 
 **Projects → Edit test → Analysis workbook** includes all 11 reference analysis
 tabs. Measurement edits persist across refreshes, segment changes, and restarts.
-**Reports → Project summary** previews and exports the same tabs with live Excel
+**Reports → Export project summary** previews and exports the same tabs with live Excel
 equations, original variable names, and group sizes that expand to fit the tests.
 Specimen metadata and supported postprocessing MAT values fill automatically;
 unavailable data stays blank. Mouse # is the numeric suffix of Mouse ID, and Type
@@ -85,7 +100,7 @@ measurements, and records for disconnected folders are preserved.
 
 Use the dashboard's **Check for updates** action to install the latest patch. If an
 older installation cannot start, download and run
-`LabTestingDataDashboard-Setup-0.2.9.exe` in its existing installation folder.
+`LabTestingDataDashboard-Setup-0.2.10.exe` in its existing installation folder.
 After it opens, use **Repair application** to repair the catalog and check the
 installation. **Reinstall from update package…** also accepts the current version's
 patch when installed application files need to be restored.
