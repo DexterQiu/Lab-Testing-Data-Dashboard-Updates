@@ -3,10 +3,28 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.7
+## Latest release: 0.2.8
 
-[Download version 0.2.7](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.7)
+[Download version 0.2.8](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.8)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.2.8 fixes manual MATLAB ring measurement ending after an intermediate
+operation. The review now finishes only with explicit confirmation or cancellation,
+and retains tracing, crop/zoom, post recoloring, saved-mask reuse, cleanup options,
+three-mask averaging, plots, and thickness outputs.
+
+Place **SU_ProjectSamples.xlsx** in the testing main folder to automatically load
+Mouse ID, Sex, Weight, Shipment, DOB, Age, and the two genotype columns. Saved Excel
+changes are detected in the background, with leading-zero test numbers supported.
+Ambiguous matches remain unmatched until an exact Mouse ID is entered.
+
+Projects supports sorting these fields. **Key Metrics → Specimen** is the first tab;
+the existing statistics and unloaded length are under **Measurements**.
+**Edit test → Specimen** edits all specimen fields and preserves manual changes
+through refreshes and restarts. Age defaults to test date minus DOB, in days.
+Disable **Calculate from test date and DOB** to enter a manual age, or use
+**Use workbook values** to remove overrides when saving. Month-only shipment
+labels stay as labels and missing weights stay blank.
 
 Version 0.2.7 renames the viewers to **Data** and **Media**. Files in `Archive`
 folders are hidden by default; **Show archived files** below the explorer controls
@@ -51,7 +69,7 @@ measurements, and records for disconnected folders are preserved.
 
 Use the dashboard's **Check for updates** action to install the latest patch. If an
 older installation cannot start, download and run
-`LabTestingDataDashboard-Setup-0.2.7.exe` in its existing installation folder.
+`LabTestingDataDashboard-Setup-0.2.8.exe` in its existing installation folder.
 After it opens, use **Repair application** to repair the catalog and check the
 installation. **Reinstall from update package…** also accepts the current version's
 patch when installed application files need to be restored.
