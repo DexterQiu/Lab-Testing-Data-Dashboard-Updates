@@ -3,10 +3,26 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.8
+## Latest release: 0.2.9
 
-[Download version 0.2.8](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.8)
+[Download version 0.2.9](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.9)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.2.9 fixes the MATLAB mask-selector callback error and makes saved-mask
+reuse follow the selected mask. Manual procedure 1.0.2 is activated on upgrade.
+
+Age is now in **weeks**, calculated as (test date − DOB) / 7. Existing day-based
+overrides are converted without losing manual edits. Projects adds a sortable
+**Specimen segment** column, supplied by the specimen workbook or **Edit test**.
+
+**Projects → Edit test → Analysis workbook** includes all 11 reference analysis
+tabs. Measurement edits persist across refreshes, segment changes, and restarts.
+**Reports → Project summary** previews and exports the same tabs with live Excel
+equations, original variable names, and group sizes that expand to fit the tests.
+Specimen metadata and supported postprocessing MAT values fill automatically;
+unavailable data stays blank. Mouse # is the numeric suffix of Mouse ID, and Type
+currently combines Project + Genotype. The supplied historical specimen records
+are not included in the software or update package.
 
 Version 0.2.8 fixes manual MATLAB ring measurement ending after an intermediate
 operation. The review now finishes only with explicit confirmation or cancellation,
@@ -21,7 +37,7 @@ Ambiguous matches remain unmatched until an exact Mouse ID is entered.
 Projects supports sorting these fields. **Key Metrics → Specimen** is the first tab;
 the existing statistics and unloaded length are under **Measurements**.
 **Edit test → Specimen** edits all specimen fields and preserves manual changes
-through refreshes and restarts. Age defaults to test date minus DOB, in days.
+through refreshes and restarts. Age defaults to test date minus DOB, in weeks.
 Disable **Calculate from test date and DOB** to enter a manual age, or use
 **Use workbook values** to remove overrides when saving. Month-only shipment
 labels stay as labels and missing weights stay blank.
@@ -69,7 +85,7 @@ measurements, and records for disconnected folders are preserved.
 
 Use the dashboard's **Check for updates** action to install the latest patch. If an
 older installation cannot start, download and run
-`LabTestingDataDashboard-Setup-0.2.8.exe` in its existing installation folder.
+`LabTestingDataDashboard-Setup-0.2.9.exe` in its existing installation folder.
 After it opens, use **Repair application** to repair the catalog and check the
 installation. **Reinstall from update package…** also accepts the current version's
 patch when installed application files need to be restored.
