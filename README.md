@@ -3,10 +3,27 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.10
+## Latest release: 0.2.11
 
-[Download version 0.2.10](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.10)
+[Download version 0.2.11](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.11)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.2.11 places **Unloaded configuration** and its values beside **Key Metrics**,
+above the Specimen and Measurements tabs. Length and outer diameter come from raw
+acquisition headers, including both LabVIEW layouts and their units. The project
+summary uses the same values; available measured MAT thickness and saved manual
+overrides are retained. Conflicting raw geometry is reported for review.
+
+**Edit test** is beside **Rename** in Projects, and shared action names are consistent
+across modules. The summary's Material Properties and Hysteresis merged titles now
+align with their table columns. The extra Specimen information block is removed
+from the workbook; specimen details remain available in the application.
+
+The Analysis column reads 2D/3D from mechanics results, including legacy result
+filenames. Mechanics procedure 1.2.1 records the analysis type in both Python and
+MATLAB outputs. The current calculation workflow remains 2D. Its 14 MATLAB
+calculation files match the supplied reference; extraction and both loading and
+unloading calculations passed separate Python/licensed-MATLAB comparisons.
 
 Version 0.2.10 replaces the Reports catalog export controls with **Export project
 Excel…** and embeds the workbook preview in **Report contents**. Select a project,
@@ -50,7 +67,8 @@ changes are detected in the background, with leading-zero test numbers supported
 Ambiguous matches remain unmatched until an exact Mouse ID is entered.
 
 Projects supports sorting these fields. **Key Metrics → Specimen** is the first tab;
-the existing statistics and unloaded length are under **Measurements**.
+the existing statistics are under **Measurements**. Unloaded configuration appears
+beside the Key Metrics heading in version 0.2.11.
 **Edit test → Specimen** edits all specimen fields and preserves manual changes
 through refreshes and restarts. Age defaults to test date minus DOB, in weeks.
 Disable **Calculate from test date and DOB** to enter a manual age, or use
