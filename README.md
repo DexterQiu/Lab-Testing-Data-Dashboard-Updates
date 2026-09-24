@@ -3,10 +3,26 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.11
+## Latest release: 0.2.12
 
-[Download version 0.2.11](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.11)
+[Download version 0.2.12](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.12)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.2.12 adds movable Overview panels. Drag a panel's title or six-dot grip
+to another panel's side to share a row, or its top/bottom edge to create a new row.
+The arrangement and sizes persist across tests and restarts. **Reset layout**
+restores the initial positions. Test Summary adapts to narrow widths; existing
+table selections and module visibility are retained.
+
+Age in weeks displays **two decimal places**. Unloaded configuration and its
+values are **right-aligned** beside Key Metrics, with blue length, amber outer
+diameter, and green wall thickness values for light and dark themes.
+
+The summary's **TTESTS** section now uses the template's native conditional rules:
+green below 0.05 and yellow from 0.05 to below 0.1. Ranges expand with the current
+comparisons in Structural Properties, Material Properties, and Hysteresis. The
+preview uses the same rules and updates after measurement edits. Native Excel
+and the preview agree on all 420 conditional cells in the review workbooks.
 
 Version 0.2.11 places **Unloaded configuration** and its values beside **Key Metrics**,
 above the Specimen and Measurements tabs. Length and outer diameter come from raw
