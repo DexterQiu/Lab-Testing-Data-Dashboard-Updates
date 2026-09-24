@@ -3,10 +3,28 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.2.12
+## Latest release: 0.3.0
 
-[Download version 0.2.12](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.2.12)
+[Download version 0.3.0](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.0)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.0 adds **Import → Scanned folders → Remove folder from app** and the
+same action on scanned roots in the File Explorer. Removing a folder changes only
+the app catalog and matching navigation preferences. Rescanning restores its test
+IDs, manual edits, notes, project assignments, and run history; source files stay
+unchanged. A canceled rescan keeps the folder removed.
+
+New note images are **at least 1920 × 1080** with their aspect ratio preserved.
+Larger images and native video frames retain their resolution. Charts render at
+higher resolution before annotation, including on high-DPI displays.
+
+Exports of tables, workbooks, PDFs, comparison charts, and parameters protect all
+existing files. Save a new export under a new filename. Postprocessing uses staged
+copies and Windows sharing locks on selected inputs. Current ring measurements
+are retained in a verified per-test location; existing original or edited
+`thickness.mat` files stay unchanged, and both extraction workflows use the latest
+verified measurement. Archiving leaves mixed or externally edited result folders
+in place. The review also fixes transaction rollback and note-save error handling.
 
 Version 0.2.12 adds movable Overview panels. Drag a panel's title or six-dot grip
 to another panel's side to share a row, or its top/bottom edge to create a new row.
