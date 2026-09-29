@@ -3,10 +3,23 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.4
+## Latest release: 0.3.5
 
-[Download version 0.3.4](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.4)
+[Download version 0.3.5](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.5)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.5 displays run and project timestamps in the **system time zone**.
+The archive toggle now controls **Recent runs** in Postprocessing and Batch as
+well as archived ring-result selections. Archived runs are clearly labelled
+when shown, and status colors remain readable after switching themes.
+
+Archiving now follows the specimen folder when a different parent folder is
+scanned, including after the previous scan root is removed. File links and notes
+are retained across archive moves. To repair older results already on disk, use
+**Settings → Repair application** after updating. Repair backs up the catalog,
+reconciles archive links, and archives older verified results behind the latest
+successful run. Modified or unproven folders stay in place with an explanation.
+Raw data remains unchanged.
 
 Version 0.3.4 repairs **Passive Biaxial Mechanical Analysis** input discovery.
 Extracted MAT datasets remain available after rescans and restarts even without
