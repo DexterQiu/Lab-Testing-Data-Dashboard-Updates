@@ -3,10 +3,26 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.6
+## Latest release: 0.3.7
 
-[Download version 0.3.6](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.6)
+[Download version 0.3.7](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.7)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.7 accepts **Specimen segment**, **Segment**, and **Test Segment**
+spreadsheet headers in any column order. Right-click a folder in the file tree
+to **Open in File Explorer**. Right-click a complete generated procedure result
+folder for **Archive result folder**. Archived folders, notes, and run history
+remain available through **Show archived files**.
+
+Automatic/manual **Biaxial Data Extraction** now share one latest-result history;
+the same applies to automatic/manual **Ring thickness measurement**. A successful
+new run archives older verified outputs of either variant. Failed or cancelled
+runs keep the previous result available. Use **Settings → Repair application**
+to consolidate existing paired histories after the usual catalog backup.
+
+Archiving verifies generated files and provenance, preserves raw data and
+untracked/edited files, and rolls back if saving its catalog changes fails.
+Scientific MATLAB functions are unchanged.
 
 Version 0.3.6 restores the original MATLAB runner's **three random starts on
 unloading**, with results organized in **2D_obj6_run1**, **run2**, and **run3**
