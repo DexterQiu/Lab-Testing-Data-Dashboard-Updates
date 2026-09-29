@@ -3,10 +3,26 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.3
+## Latest release: 0.3.4
 
-[Download version 0.3.3](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.3)
+[Download version 0.3.4](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.4)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.4 repairs **Passive Biaxial Mechanical Analysis** input discovery.
+Extracted MAT datasets remain available after rescans and restarts even without
+their original run-history association. Automatic and Manual extraction results
+are distinguished by their folders. Validation rejects a ring `thickness.mat`
+or an incomplete dataset before starting MATLAB and explains which file to use.
+
+**Target pressure (mmHg)** still defaults to **93.33** and also accepts a list
+such as **[80 100 120 140]**. Each phase is fitted once, then analyzed at every
+requested pressure. Loading and unloading results include MAT arrays, CSV
+tables, original MATLAB figures, and plot-data workbooks. The original MATLAB
+scientific functions are preserved; both phases of specimen 1714 matched the
+original runner exactly at all four pressures with the same initial parameters.
+Raw inputs and the reference source remain unchanged. Python supports the same
+pressure list, but its independent optimizer can return different fitted
+parameters from MATLAB.
 
 Version 0.3.3 adds a per-test report **Type** in **Projects → Edit test**.
 Leave it blank to use **Project + Genotype**, the existing default. The project
