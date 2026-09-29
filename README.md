@@ -3,10 +3,22 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.2
+## Latest release: 0.3.3
 
-[Download version 0.3.2](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.2)
+[Download version 0.3.3](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.3)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.3 adds a per-test report **Type** in **Projects → Edit test**.
+Leave it blank to use **Project + Genotype**, the existing default. The project
+table keeps long Types compact and shows the complete value on hover. The same
+Type drives report previews, Excel exports, and cohort statistics. The previous
+Type classification (such as Biaxial) is now labelled **Testing Type** throughout
+the app. Saved Types survive rescans, spreadsheet refreshes, and restarts.
+
+The **Pi16-Cre** and **ROSA** spreadsheet columns now appear in Projects,
+**Projects → Columns**, Edit test, and specimen details. They are read by header
+regardless of column order, and manual edits remain preserved during refresh.
+The source workbook and raw data remain unchanged.
 
 Version 0.3.2 finds `.xlsx` specimen workbooks with **Samples** in their name,
 including **Samples.xlsx**, **ProjectSamples.xlsx**, and project-specific names.
