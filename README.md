@@ -3,10 +3,29 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.0
+## Latest release: 0.3.1
 
-[Download version 0.3.0](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.0)
+[Download version 0.3.1](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.1)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.1 names scanned tests after the folder containing their raw data,
+including when that folder is scanned directly. Known legacy filename-based
+names are corrected on upgrade, and deliberate renames are retained on rescan.
+Postprocessing and Batch use the same test name while detecting acquisition
+filename prefixes independently.
+
+The specimen workbook reads **Age (weeks)** and **Specimen segment** wherever
+those columns appear. A missing age uses `(test date − DOB) / 7`; manual age edits
+remain preserved. **Projects → Show untested specimens** shows workbook mice
+without an associated test folder. These have no test date and use today's date
+to calculate their age. Once their test folder is scanned, they leave this group.
+
+The saved age window defaults to **25 weeks ± 5 days** (170–180 days). Ages are
+green within range, yellow during the **3 days** before the upper limit, and red
+outside the range. The upper limit itself is yellow; unknown ages stay neutral.
+The **Range** button beside the checkbox opens a compact popup with
+Save and Cancel. The switch, target age, tolerance, and warning window persist
+across restarts. Ages display two decimals while comparisons use exact days.
 
 Version 0.3.0 adds **Import → Scanned folders → Remove folder from app** and the
 same action on scanned roots in the File Explorer. Removing a folder changes only
