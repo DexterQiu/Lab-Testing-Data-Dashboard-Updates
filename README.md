@@ -3,10 +3,33 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.5
+## Latest release: 0.3.6
 
-[Download version 0.3.5](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.5)
+[Download version 0.3.6](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.6)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.6 restores the original MATLAB runner's **three random starts on
+unloading**, with results organized in **2D_obj6_run1**, **run2**, and **run3**
+folders. The combined MAT file preserves the original variables and every fit.
+Initial guesses and objective values are recorded; the summary selects the
+lowest objective value without mixing fits or phases.
+
+Default target pressures are **[80 100 120] mmHg**. The summary maps 80 to
+diastolic, 100 to MAP, and 120 to systolic, including all four matching linearized
+stiffness components in MPa. **H (µm) comes directly from the test folder's
+thickness.mat**. Selecting a preview cell shows the source file, native field,
+fit, and pressure row. Existing template formulas and formatting are retained.
+
+All three MATLAB fits matched the original runner with **zero numerical
+difference**, including every native loaded-property and stiffness array. The
+calculation functions and source datasets remain unchanged. Three starts seek
+a better minimum; they do not guarantee a global minimum. Python retains its
+independent optimizer and compact plot, with the same output structure.
+
+After updating, choose **Restore original defaults** in Passive Biaxial
+Mechanical Analysis if an older saved preset remains, then run the analysis to
+produce the three-fit, three-pressure results. Existing results are retained
+through the app's archive workflow.
 
 Version 0.3.5 displays run and project timestamps in the **system time zone**.
 The archive toggle now controls **Recent runs** in Postprocessing and Batch as
@@ -27,8 +50,8 @@ their original run-history association. Automatic and Manual extraction results
 are distinguished by their folders. Validation rejects a ring `thickness.mat`
 or an incomplete dataset before starting MATLAB and explains which file to use.
 
-**Target pressure (mmHg)** still defaults to **93.33** and also accepts a list
-such as **[80 100 120 140]**. Each phase is fitted once, then analyzed at every
+In v0.3.4, **Target pressure (mmHg)** defaulted to **93.33** and also accepted a list
+such as **[80 100 120 140]**. Each phase was fitted once, then analyzed at every
 requested pressure. Loading and unloading results include MAT arrays, CSV
 tables, original MATLAB figures, and plot-data workbooks. The original MATLAB
 scientific functions are preserved; both phases of specimen 1714 matched the
