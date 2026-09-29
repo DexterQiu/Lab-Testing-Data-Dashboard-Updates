@@ -3,10 +3,30 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.1
+## Latest release: 0.3.2
 
-[Download version 0.3.1](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.1)
+[Download version 0.3.2](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.2)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.2 finds `.xlsx` specimen workbooks with **Samples** in their name,
+including **Samples.xlsx**, **ProjectSamples.xlsx**, and project-specific names.
+It checks the scanned folder and then its immediate parent. Column order may
+vary: **Mouse** / **Mouse ID** and **Age at Testing (wks)** / **Age (weeks)** are
+recognized by their headers. KLF4 and Fbn1 retain their genotype mappings when
+the Stanford workbook's other gene columns are reordered. Manual edits and
+source workbook formulas remain preserved.
+
+**Projects → Columns** opens a checkbox list of test and specimen fields.
+**Save** remembers the visible columns across refreshes and restarts; **Cancel**
+discards edits and **Restore Defaults** selects every field. Project / Test
+always stays visible. Hidden fields remain available for search and exports.
+
+Import notices now appear directly in Projects. Multiple matching workbooks in
+one folder produce a clear notice instead of choosing one arbitrarily. Keep one
+current specimen workbook in each folder. An invalid or locked save retains
+previous imports until the next successful refresh. Shared parent workbooks do
+not duplicate pending rows, and removing a scanned folder removes its pending
+specimens from the view without changing any source files.
 
 Version 0.3.1 names scanned tests after the folder containing their raw data,
 including when that folder is scanned directly. Known legacy filename-based
