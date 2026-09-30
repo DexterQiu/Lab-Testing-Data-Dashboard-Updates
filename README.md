@@ -3,10 +3,22 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.7
+## Latest release: 0.3.8
 
-[Download version 0.3.7](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.7)
+[Download version 0.3.8](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.8)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.8 refreshes Reports after postprocessing and includes current results
+saved outside scanned folders in Reports and Edit test. The output console keeps
+full logs while avoiding repeated reads of unchanged files and preserving text
+selection when output is appended.
+
+Restart recovery restores catalog paths, notes, and input links for verified
+archive moves interrupted before the catalog commit. Replaying old history no
+longer redirects input links from a reused result folder. Large rescans avoid
+SQLite parameter limits, and worker updates retain independent data snapshots.
+Archive recovery, log caching, and summary discovery are separate services for
+future modules. Raw-file protections and scientific MATLAB functions are unchanged.
 
 Version 0.3.7 accepts **Specimen segment**, **Segment**, and **Test Segment**
 spreadsheet headers in any column order. Right-click a folder in the file tree
