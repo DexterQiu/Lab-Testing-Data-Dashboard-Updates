@@ -3,10 +3,16 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.9
+## Latest release 0.3.10
 
-[Download version 0.3.9](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.9)
-for the Windows installer, update patch, checksums, and validation details.
+Get the Windows installer, update patch, and checksums from the [v0.3.10 release](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.10).
+
+When you open the app or press **F5**, progress shows the number of indexed
+files loaded. During **Scan main folder**, you can browse the previous inventory
+while the app discovers files, reads instrument targets, indexes changes, and
+organizes tests. **Cancel scan** keeps the last completed inventory.
+Large folders populate as you expand them, and galleries decode visible
+thumbnails in the background.
 
 Version 0.3.9 adds searchable **offline Help** through the top-bar Help button
 or **F1**. It opens instructions for the active module and covers every module,
