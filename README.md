@@ -10,8 +10,11 @@ for the Windows installer, update patch, checksums, and validation details.
 
 Version 0.3.9 adds searchable **offline Help** through the top-bar Help button
 or **F1**. It opens instructions for the active module and covers every module,
-workflow controls, troubleshooting and all bundled procedures. Parameter names,
-defaults, units and choices come from installed procedure definitions; new
+workflow controls, troubleshooting and all bundled procedures.
+The visual walkthroughs include **37 screenshots and 121 clickable control
+markers**, with Previous/Next, zoom, close-up Focus, and highlighted controls.
+Screenshot clicks only navigate the instructions and never execute app actions.
+Parameter names, defaults, units and choices come from installed procedure definitions; new
 registered versions appear when Help is reopened. The guide works alongside
 the app in light and dark themes and is included in installation health checks.
 
