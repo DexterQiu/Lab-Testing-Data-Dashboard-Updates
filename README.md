@@ -7,13 +7,27 @@ checksums for Lab Testing Data Dashboard installations.
 
 Download [Windows setup](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/download/v0.3.11/LabTestingDataDashboard-Setup-0.3.11.exe), [unsigned Mac installer for Apple silicon](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/download/v0.3.11/LabTestingDataDashboard-0.3.11-macOS-arm64.pkg) or [unsigned Mac installer for Intel](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/download/v0.3.11/LabTestingDataDashboard-0.3.11-macOS-x86_64.pkg). Both Mac packages target macOS 15 and later. The [release page](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.11) includes the Windows update patch and checksums for all four downloads.
 
-**Mac installation and updates.** Gatekeeper may flag these installers because they have no Apple Developer ID signature or notarization. The v0.3.11 in-app updater can also report `CERTIFICATE_VERIFY_FAILED` when it connects to GitHub. Lab members with source-repository access can run v0.3.12 using Python 3.12 and their existing dashboard catalog. This route uses the Mac’s system certificate trust for update checks and downloads. [Run on macOS from source](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard#run-on-macos-from-source)
+**Mac installation and updates.** Gatekeeper may flag these installers because they have no Apple Developer ID signature or notarization. The v0.3.11 in-app updater can also report `CERTIFICATE_VERIFY_FAILED` when it connects to GitHub. The v0.3.12 source version uses the Mac’s system certificate trust for update checks and downloads. [Run on macOS from source](#run-on-macos-from-source)
 
 Help opens each illustrated control in a readable close-up. Choose **Fit** for the whole window and **Focus** to return to the control. Right-click a marker for its instructions, or choose **Help for this item** from a file, test, input, batch or note context menu. Control-click also opens the menu on a Mac.
 
 The offline MATLAB guide covers the lab-validated automatic and manual ring measurements, automatic and manual passive extraction, and non-regional passive mechanical analysis. Regional passive analysis, inverse modeling and pDIC are marked unvalidated. Press **F1** in a test's Postprocessing tab to read the selected procedure's guide.
 
 Windows and Mac use the same scientific source, project and reporting features, and rules for protecting acquisition files. A full licensed MATLAB installation with the appropriate toolboxes is required for MATLAB procedures. **Settings → Check for updates** selects the download for the current platform.
+
+### Run on macOS from source
+
+On macOS 15 or later, quit the dashboard and open Terminal. You need Python 3.12, Git, and access to the lab’s private source repository. Run these commands from a folder where you keep applications or software checkouts.
+
+```bash
+git clone https://github.com/DexterQiu/Lab-Testing-Data-Dashboard.git
+cd Lab-Testing-Data-Dashboard
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -e .
+.venv/bin/python -m lab_testing_dashboard
+```
+
+The dashboard opens your existing catalog when you use the same Mac account. For later launches, run the last command from the checkout. To update, quit the dashboard, run `git pull --ff-only`, then repeat the install and launch commands. The v0.3.12 Intel and Apple silicon installers are available to repository members as GitHub Actions test artifacts. [Mac build verification](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard/actions/runs/44200965055)
 
 ## Version 0.3.10
 
