@@ -3,10 +3,25 @@
 This public repository contains release metadata and update packages with SHA-256
 checksums for Lab Testing Data Dashboard installations.
 
-## Latest release: 0.3.8
+## Latest release: 0.3.9
 
-[Download version 0.3.8](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.8)
+[Download version 0.3.9](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard-Updates/releases/tag/v0.3.9)
 for the Windows installer, update patch, checksums, and validation details.
+
+Version 0.3.9 adds searchable **offline Help** through the top-bar Help button
+or **F1**. It opens instructions for the active module and covers every module,
+workflow controls, troubleshooting and all bundled procedures. Parameter names,
+defaults, units and choices come from installed procedure definitions; new
+registered versions appear when Help is reopened. The guide works alongside
+the app in light and dark themes and is included in installation health checks.
+
+After organizing files outside the app, rescan to discover their new paths.
+Right-click an old **[missing]** file for **Remove missing entry**, or its folder
+for **Remove missing entries**. This clears stale catalog views while retaining
+notes and test metadata. Right-click the root for **Restore missing entries**
+to undo. If a file returns at its old path, rescanning restores its original
+record. Empty scanned roots remain accessible. Source files are never moved or
+deleted by these cleanup actions; unavailable roots and returned files are skipped.
 
 Version 0.3.8 refreshes Reports after postprocessing and includes current results
 saved outside scanned folders in Reports and Edit test. The output console keeps
