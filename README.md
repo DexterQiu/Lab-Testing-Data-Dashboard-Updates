@@ -17,17 +17,21 @@ Windows and Mac use the same scientific source, project and reporting features, 
 
 ### Run on macOS from source
 
-On macOS 15 or later, quit the dashboard and open Terminal. You need Python 3.12, Git, and access to the lab’s private source repository. Run these commands from a folder where you keep applications or software checkouts.
+On macOS 15 or later, quit the dashboard and open Terminal. If you already cloned the source, run `git pull --ff-only` in that checkout. For a first installation, use Git and your access to the lab’s private repository to get a copy.
 
 ```bash
-git clone https://github.com/DexterQiu/Lab-Testing-Data-Dashboard.git
-cd Lab-Testing-Data-Dashboard
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -e .
-.venv/bin/python -m lab_testing_dashboard
+git clone --depth 1 https://github.com/DexterQiu/Lab-Testing-Data-Dashboard.git && cd Lab-Testing-Data-Dashboard
 ```
 
-The dashboard opens your existing catalog when you use the same Mac account. For later launches, run the last command from the checkout. To update, quit the dashboard, run `git pull --ff-only`, then repeat the install and launch commands. The v0.3.12 Intel and Apple silicon installers are available to repository members as GitHub Actions test artifacts. [Mac build verification](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard/actions/runs/44200965055)
+From the checkout, set up the environment and launch the dashboard.
+
+```bash
+bash scripts/setup-macos.sh && .venv/bin/python -m lab_testing_dashboard
+```
+
+Setup looks for Python 3.11 or newer, including an interpreter available as `python3`. If it reports that Python is missing or too old, install the standard **Python 3.13 macOS installer**, open **Applications → Python 3.13 → Install Certificates.command**, and rerun the setup command in the same checkout. [Python downloads for macOS](https://www.python.org/downloads/macos/)
+
+The dashboard opens your existing catalog under the same Mac account. For later launches, run `.venv/bin/python -m lab_testing_dashboard`. To update, quit the dashboard, run `git pull --ff-only`, then repeat the setup and launch command. The v0.3.12 Intel and Apple silicon installers are available to repository members as GitHub Actions test artifacts. [Mac build verification](https://github.com/DexterQiu/Lab-Testing-Data-Dashboard/actions/runs/44200965055)
 
 ## Version 0.3.10
 
